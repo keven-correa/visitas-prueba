@@ -1,0 +1,14 @@
+﻿@model VisitorsApp.Entities.Visitor
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<partial name="_VisitorDetails" />
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-success">Editar</a>  
+    <a asp-action="Index" class="btn btn-secondary">Regresar</a>
+</div>

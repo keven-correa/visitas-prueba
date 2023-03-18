@@ -1,0 +1,18 @@
+﻿@model VisitorsApp.Entities.Visitor
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h3>Esta seguro de querer eliminar esta visita?</h3>
+<div>
+    <partial name="_VisitorDetails" />
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Elimnar" class="btn btn-danger" /> |
+        <a asp-action="Index" class="btn btn-secondary">Regresar</a>
+    </form>
+</div>
